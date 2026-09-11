@@ -81,9 +81,7 @@ Rails.application.configure do
 if ENV['RESEND_API_KEY']
     config.action_mailer.delivery_method = :resend
     config.action_mailer.resend_settings = { api_key: ENV.fetch('RESEND_API_KEY', nil) }
-  end
-
-    if ENV['SMTP_ADDRESS']
+elsif ENV['SMTP_ADDRESS']
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       address: ENV.fetch('SMTP_ADDRESS', nil),
