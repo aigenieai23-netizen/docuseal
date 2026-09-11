@@ -2,6 +2,7 @@
 
 require 'active_support/core_ext/integer/time'
 require 'active_support/core_ext/string'
+require_relative '../initializers/resend_delivery_method'
 
 Rails.backtrace_cleaner.remove_silencers!
 
